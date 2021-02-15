@@ -25,17 +25,6 @@ jobs:
       name: "echo an env var that is part of our project"
       command: |
        echo $yourname  # this env var that is part of our project
-jobs: 
- print_hello: 
-  docker:
-   - image: circleci/node:13.8.0
-  run:
-   - run: echo hello
- print_world:
-  docker:
-   - image: circleci/node:13.8.0
-  steps:
-   - run: echo world
 workflows:
   # Name the workflow "welcome"
   welcome:
