@@ -35,4 +35,9 @@ workflows:
     - print_world:
        requires:
         - print_hello
-    - build
+
+          
+  # name of second workflow
+   secondworkflow:
+    jobs:
+     - build
