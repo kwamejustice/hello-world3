@@ -23,7 +23,7 @@ jobs:
    - run: echo world
   steps: 
    - checkout
-   - run
+   - run:
       name: "echo an env var that is part of our project"
       command: |
        echo $yourname  # this env var that is part of our project
