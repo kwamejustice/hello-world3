@@ -19,6 +19,9 @@ jobs:
  build:
   docker:
    - image: circelci/node:13.8.0
+     auth:
+      username: $username
+      password: $password
   steps: 
    - checkout
    - run:
