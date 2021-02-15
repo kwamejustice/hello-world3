@@ -18,10 +18,7 @@ jobs:
    - run: echo world
  build:
   docker:
-   - image: circelci/node:13.8.0
-     auth:
-      username: $username
-      password: $password
+   - image: cimg/base:2020.01
   steps: 
    - checkout
    - run:
