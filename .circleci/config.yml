@@ -38,6 +38,6 @@ workflows:
 
           
   # name of second workflow
-   secondworkflow:
-    jobs:
-     - build
+  secondworkflow:
+   jobs:
+    - build
