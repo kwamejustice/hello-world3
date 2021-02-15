@@ -10,6 +10,7 @@ orbs:
   # Declare a dependency on the welcome-orb
   welcome: circleci/welcome-orb@0.4.1
 # Orchestrate or schedule a set of jobs
+<<<<<<< HEAD
 jobs: 
  print_hello: 
   docker:
@@ -27,14 +28,36 @@ jobs:
       name: "echo an env var that is part of our project"
       command: |
        echo $yourname  # this env var that is part of our project
+||||||| 7b9a012
+jobs: 
+ print_hello: 
+  docker:
+   - image: circleci/node:13.8.0
+  run:
+   - run: echo hello
+ print_world:
+  docker:
+   - image: circleci/node:13.8.0
+  steps:
+   - run: echo world
+=======
+>>>>>>> 407f7e3f56d4e506d987efa6faf958f69355ea9a
 workflows:
   # Name the workflow "welcome"
   welcome:
     # Run the welcome/run job in its own container
     jobs:
       - welcome/run
+<<<<<<< HEAD
       - print_hello
       - print_world:
          requires:
           -print_hello
       
+||||||| 7b9a012
+      - print_hello
+      - print_world:
+         requires:
+          -print_hello
+=======
+>>>>>>> 407f7e3f56d4e506d987efa6faf958f69355ea9a
